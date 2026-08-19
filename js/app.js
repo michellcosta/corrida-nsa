@@ -246,15 +246,14 @@ function initInputMasks() {
 }
 
 /* ==========================================================================
-   5. LISTA PÚBLICA DE ATLETAS INSCRITOS
+   5. LISTA PÚBLICA DE ATLETAS INSCRITOS (DESKTOP & MOBILE CARDS)
    ========================================================================== */
 function renderPublicAthletesList(filterQuery = '') {
   const tableBody = document.getElementById('publicAthletesTableBody');
+  const mobileCards = document.getElementById('publicAthletesMobileCards');
   const countBadge = document.getElementById('publicAthletesCount');
-  if (!tableBody) return;
 
   const athletes = getAthletes();
-  // Mostrar apenas confirmados na lista pública
   const confirmedAthletes = athletes.filter(a => a.status === 'confirmed');
 
   const filtered = confirmedAthletes.filter(a => {
@@ -266,36 +265,59 @@ function renderPublicAthletesList(filterQuery = '') {
     countBadge.textContent = `${confirmedAthletes.length} Atleta(s) Confirmado(s)`;
   }
 
+  // Se não encontrar nada
   if (filtered.length === 0) {
-    tableBody.innerHTML = `
-      <tr>
-        <td colspan="4" style="text-align: center; padding: 2rem; color: #64748b;">
-          <i class="fa-solid fa-search" style="font-size: 1.5rem; margin-bottom: 0.5rem; display: block;"></i>
-          Nenhum atleta confirmado encontrado com esse termo.
-        </td>
-      </tr>
+    const emptyMsg = `
+      <div style="text-align: center; padding: 2.5rem 1rem; color: #64748b; width: 100%;">
+        <i class="fa-solid fa-magnifying-glass" style="font-size: 1.8rem; margin-bottom: 0.5rem; display: block; color: var(--color-gold);"></i>
+        <p style="font-weight: 600; font-size: 0.95rem;">Nenhum atleta encontrado com o termo buscado.</p>
+      </div>
     `;
+    if (tableBody) tableBody.innerHTML = `<tr><td colspan="4">${emptyMsg}</td></tr>`;
+    if (mobileCards) mobileCards.innerHTML = emptyMsg;
     return;
   }
 
-  tableBody.innerHTML = filtered.map(a => `
-    <tr>
-      <td>
-        <strong style="color: var(--color-gold-dark); font-family: var(--font-heading);">${a.id}</strong>
-      </td>
-      <td>
-        <div style="font-weight: 700; color: var(--color-primary-navy);">${a.name}</div>
-      </td>
-      <td>
-        <span style="color: #475569; font-weight: 600;">${a.modality}</span>
-      </td>
-      <td>
-        <span class="badge-status confirmed">
-          <i class="fa-solid fa-circle-check"></i> Confirmado
-        </span>
-      </td>
-    </tr>
-  `).join('');
+  // Render para Tabela Desktop
+  if (tableBody) {
+    tableBody.innerHTML = filtered.map(a => `
+      <tr>
+        <td>
+          <strong style="color: var(--color-gold-dark); font-family: var(--font-heading); font-size: 1rem;">${a.id}</strong>
+        </td>
+        <td>
+          <div style="font-weight: 700; color: var(--color-primary-navy);">${a.name}</div>
+        </td>
+        <td>
+          <span style="color: #475569; font-weight: 600;">${a.modality}</span>
+        </td>
+        <td>
+          <span class="badge-status confirmed">
+            <i class="fa-solid fa-circle-check"></i> Confirmado
+          </span>
+        </td>
+      </tr>
+    `).join('');
+  }
+
+  // Render para Cards Mobile
+  if (mobileCards) {
+    mobileCards.innerHTML = filtered.map(a => `
+      <div class="athlete-mobile-card">
+        <div class="athlete-card-header">
+          <span class="athlete-card-id">${a.id}</span>
+          <span class="badge-status confirmed">
+            <i class="fa-solid fa-circle-check"></i> Confirmado
+          </span>
+        </div>
+        <div class="athlete-card-name">${a.name}</div>
+        <div class="athlete-card-meta">
+          <i class="fa-solid fa-person-running" style="color: var(--color-accent-blue);"></i>
+          <span>${a.modality}</span>
+        </div>
+      </div>
+    `).join('');
+  }
 }
 
 function handlePublicSearch(e) {

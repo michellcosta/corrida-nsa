@@ -325,22 +325,26 @@
         <input type="text" class="search-input" placeholder="Buscar por Nome ou Número de Inscrição..." oninput="handlePublicSearch(event)">
       </div>
 
-      <!-- Tabela de Inscritos -->
+      <!-- Tabela / Cards de Inscritos -->
       <div class="athletes-table-card">
-        <div style="overflow-x: auto;">
-          <table class="athletes-table">
-            <thead>
-              <tr>
-                <th>Nº Inscrição</th>
-                <th>Nome do Atleta</th>
-                <th>Modalidade</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody id="publicAthletesTableBody">
-              <!-- Preenchido dinamicamente via app.js -->
-            </tbody>
-          </table>
+        <!-- Tabela para Desktop -->
+        <table class="athletes-table desktop-table">
+          <thead>
+            <tr>
+              <th>Nº Inscrição</th>
+              <th>Nome do Atleta</th>
+              <th>Modalidade</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="publicAthletesTableBody">
+            <!-- Preenchido dinamicamente via app.js -->
+          </tbody>
+        </table>
+
+        <!-- Cards para Telas Mobile -->
+        <div class="athletes-mobile-cards-grid" id="publicAthletesMobileCards">
+          <!-- Preenchido dinamicamente via app.js -->
         </div>
       </div>
     </div>

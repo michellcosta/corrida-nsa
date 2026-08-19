@@ -969,12 +969,55 @@ button, input, select, textarea {
   font-size: 1.1rem;
 }
 
-.athletes-table-card {
+.athletes-mobile-cards-grid {
+  display: none;
+}
+
+.athlete-mobile-card {
   background: #ffffff;
-  border-radius: 16px;
   border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
   box-shadow: var(--shadow-sm);
-  overflow: hidden;
+  transition: all var(--transition-fast);
+}
+
+.athlete-mobile-card:hover {
+  border-color: var(--color-gold);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.athlete-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.athlete-card-id {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--color-gold-dark);
+}
+
+.athlete-card-name {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--color-primary-navy);
+  line-height: 1.2;
+}
+
+.athlete-card-meta {
+  font-size: 0.85rem;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
 }
 
 .athletes-table {
@@ -1975,6 +2018,18 @@ input:checked + .slider-round:before {
   .btn-guarantee-spot {
     padding: 15px 18px;
     font-size: 1.05rem;
+  }
+
+  /* Lista de Inscritos Responsiva (Cards no Mobile) */
+  .desktop-table {
+    display: none !important;
+  }
+
+  .athletes-mobile-cards-grid {
+    display: flex !important;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
   }
 
   /* Kit Grid Mobile */
