@@ -108,23 +108,23 @@ button, input, select, textarea {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: rgba(8, 23, 46, 0.96);
+  background: rgba(8, 23, 46, 0.98);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(229, 184, 59, 0.2);
+  border-bottom: 1px solid rgba(229, 184, 59, 0.25);
   transition: var(--transition-normal);
 }
 
 .header.scrolled {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  background: rgba(6, 18, 36, 0.98);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  background: rgba(6, 18, 36, 0.99);
 }
 
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: 75px;
 }
 
 .nav-brand {
@@ -132,11 +132,12 @@ button, input, select, textarea {
   align-items: center;
   gap: 12px;
   color: #fff;
+  text-decoration: none;
 }
 
 .brand-icon {
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -145,41 +146,45 @@ button, input, select, textarea {
   color: var(--color-primary-navy);
   box-shadow: var(--shadow-gold);
   flex-shrink: 0;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 .brand-text {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .brand-sub {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   color: var(--color-gold-light);
-  font-weight: 600;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 2px;
 }
 
 .brand-title {
   font-family: var(--font-heading);
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   font-weight: 800;
   letter-spacing: 0.5px;
   color: #ffffff;
   text-transform: uppercase;
+  line-height: 1.15;
 }
 
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 1.6rem;
+  gap: 1.5rem;
 }
 
 .nav-link {
   color: #e2e8f0;
-  font-size: 0.95rem;
-  font-weight: 500;
+  font-size: 0.92rem;
+  font-weight: 600;
   position: relative;
   padding: 6px 0;
 }
@@ -204,10 +209,10 @@ button, input, select, textarea {
   color: var(--color-primary-navy);
   font-family: var(--font-heading);
   font-weight: 800;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   letter-spacing: 1px;
   text-transform: uppercase;
-  padding: 10px 22px;
+  padding: 9px 20px;
   border-radius: 8px;
   border: none;
   cursor: pointer;
@@ -216,6 +221,7 @@ button, input, select, textarea {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  white-space: nowrap;
 }
 
 .btn-header-cta:hover {
@@ -229,21 +235,23 @@ button, input, select, textarea {
   background: transparent;
   border: none;
   color: #fff;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   cursor: pointer;
-  padding: 4px;
+  padding: 6px;
+  display: none;
 }
 
 /* ==========================================================================
-   HERO SECTION (CENTERED & RESPONSIVE)
+   HERO SECTION (FLUID, CENTERED & HARMONIOUS)
    ========================================================================== */
 .hero {
   position: relative;
   background: radial-gradient(circle at center, #153b6d 0%, #08172e 80%);
   color: #fff;
-  padding-top: 130px;
-  padding-bottom: 90px;
+  padding-top: 120px;
+  padding-bottom: 85px;
   overflow: hidden;
+  text-align: center;
 }
 
 .hero-glow-1 {
@@ -272,7 +280,7 @@ button, input, select, textarea {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  justify-content: center;
   max-width: 860px;
   margin: 0 auto;
   position: relative;
@@ -288,22 +296,24 @@ button, input, select, textarea {
 
 .hero-edition {
   display: flex;
-  align-items: baseline;
+  flex-direction: row;
+  align-items: center;
   justify-content: center;
-  gap: 15px;
-  margin-bottom: 0.5rem;
-  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 0.8rem;
+  text-align: left;
 }
 
 .hero-number {
   font-family: var(--font-heading);
   font-size: 5.5rem;
   font-weight: 900;
-  line-height: 0.9;
+  line-height: 0.85;
   background: var(--color-gold-metallic);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0 4px 20px rgba(229, 184, 59, 0.3);
+  flex-shrink: 0;
 }
 
 .hero-title-group {
@@ -314,17 +324,17 @@ button, input, select, textarea {
 
 .hero-title-top {
   font-family: var(--font-heading);
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   line-height: 1.1;
   color: #ffffff;
 }
 
 .hero-title-church {
   font-family: var(--font-heading);
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 900;
   text-transform: uppercase;
   color: var(--color-gold);
@@ -337,9 +347,9 @@ button, input, select, textarea {
   font-style: italic;
   font-weight: 400;
   color: #cbd5e1;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin: 1rem auto 1.8rem;
   line-height: 1.4;
+  text-align: center;
   max-width: 600px;
 }
 
@@ -351,7 +361,8 @@ button, input, select, textarea {
 .hero-cta-box {
   display: inline-flex;
   align-items: center;
-  gap: 1rem;
+  justify-content: center;
+  gap: 1.2rem;
   background: var(--color-gold-metallic);
   padding: 14px 28px;
   border-radius: 12px;
@@ -361,6 +372,7 @@ button, input, select, textarea {
   box-shadow: var(--shadow-gold);
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .hero-cta-box:hover {
@@ -378,6 +390,7 @@ button, input, select, textarea {
   font-size: 1.2rem;
   letter-spacing: 1.5px;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .hero-cta-box .cta-divider {
@@ -389,11 +402,12 @@ button, input, select, textarea {
 .hero-cta-box .cta-price {
   font-size: 1.4rem;
   font-weight: 900;
+  white-space: nowrap;
 }
 
 /* Countdown Timer */
 .countdown-container {
-  margin-top: 2.2rem;
+  margin-top: 2rem;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(229, 184, 59, 0.3);
   backdrop-filter: blur(10px);
@@ -1750,8 +1764,8 @@ button, input, select, textarea {
 .switch-toggle {
   position: relative;
   display: inline-block;
-  width: 48px;
-  height: 26px;
+  width: 46px;
+  height: 24px;
 }
 
 .switch-toggle input {
@@ -1772,8 +1786,8 @@ button, input, select, textarea {
 .slider-round:before {
   position: absolute;
   content: "";
-  height: 18px;
-  width: 18px;
+  height: 16px;
+  width: 16px;
   left: 4px;
   bottom: 4px;
   background-color: white;
@@ -1790,7 +1804,7 @@ input:checked + .slider-round:before {
 }
 
 /* ==========================================================================
-   RESPONSIVE MEDIA QUERIES (PERFECT MOBILE OPTIMIZATION)
+   RESPONSIVE MEDIA QUERIES (MOBILE FIXES)
    ========================================================================== */
 @media (max-width: 992px) {
   .info-highlight-grid {
@@ -1820,9 +1834,9 @@ input:checked + .slider-round:before {
     padding: 0 1.2rem;
   }
 
-  /* Compact Navbar */
+  /* Navbar Mobile - Clean & Non-clipping */
   .navbar {
-    height: 68px;
+    height: 70px;
   }
 
   .brand-icon {
@@ -1836,12 +1850,12 @@ input:checked + .slider-round:before {
   }
 
   .brand-title {
-    font-size: 0.88rem;
+    font-size: 0.85rem;
   }
 
+  /* Hide header CTA on mobile to avoid cramped navbar */
   .btn-header-cta {
-    padding: 8px 14px;
-    font-size: 0.8rem;
+    display: none;
   }
 
   .nav-toggle {
@@ -1850,10 +1864,10 @@ input:checked + .slider-round:before {
 
   .nav-menu {
     position: fixed;
-    top: 68px;
+    top: 70px;
     left: -100%;
     width: 100%;
-    height: calc(100vh - 68px);
+    height: calc(100vh - 70px);
     background: #08172e;
     flex-direction: column;
     padding: 2rem 1.5rem;
@@ -1875,14 +1889,15 @@ input:checked + .slider-round:before {
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 
-  /* Compact Hero */
+  /* Hero Section Mobile */
   .hero {
-    padding-top: 100px;
+    padding-top: 105px;
     padding-bottom: 60px;
   }
 
   .hero-edition {
-    gap: 10px;
+    gap: 12px;
+    margin-bottom: 0.5rem;
   }
 
   .hero-number {
@@ -1890,33 +1905,47 @@ input:checked + .slider-round:before {
   }
 
   .hero-title-top {
-    font-size: 1.45rem;
+    font-size: 1.25rem;
+    line-height: 1.1;
   }
 
   .hero-title-church {
-    font-size: 1.6rem;
+    font-size: 1.35rem;
+    line-height: 1.1;
   }
 
   .hero-slogan {
     font-size: 1.05rem;
-    margin: 0.8rem 0 1.6rem;
+    margin: 0.8rem auto 1.6rem;
   }
 
   .hero-cta-box {
-    width: 100%;
-    max-width: 320px;
     padding: 12px 20px;
+    gap: 12px;
+  }
+
+  .hero-cta-box .runner-icon {
+    font-size: 1.35rem;
   }
 
   .hero-cta-box .cta-action {
-    font-size: 1.05rem;
+    font-size: 1rem;
   }
 
   .hero-cta-box .cta-price {
     font-size: 1.2rem;
   }
 
-  /* Sections Spacing */
+  .countdown-container {
+    margin-top: 1.6rem;
+    padding: 1rem 0.8rem;
+  }
+
+  .countdown-val {
+    font-size: 1.35rem;
+  }
+
+  /* Section Spacing */
   .section-info-highlight,
   .section-included,
   .section-athletes-list,
@@ -1929,7 +1958,7 @@ input:checked + .slider-round:before {
     font-size: 1.65rem;
   }
 
-  /* Card Highlight */
+  /* Registration Highlight Card */
   .card-registration-highlight {
     padding: 2.2rem 1.4rem;
     border-radius: 18px;
@@ -1948,7 +1977,7 @@ input:checked + .slider-round:before {
     font-size: 1.05rem;
   }
 
-  /* Kit Grid (2 Columns on mobile) */
+  /* Kit Grid Mobile */
   .kit-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.8rem;
@@ -2067,16 +2096,20 @@ input:checked + .slider-round:before {
 }
 
 @media (max-width: 480px) {
+  .hero-edition {
+    gap: 10px;
+  }
+
   .hero-number {
     font-size: 3.6rem;
   }
 
   .hero-title-top {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
   }
 
   .hero-title-church {
-    font-size: 1.35rem;
+    font-size: 1.2rem;
   }
 
   .countdown-grid {
