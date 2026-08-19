@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1ª Corrida da Paróquia de Nossa Senhora Aparecida | Galo Branco - SG</title>
+  <meta name="description" content="Participe da 1ª Corrida da Paróquia de Nossa Senhora Aparecida em São Gonçalo/RJ. Percurso de 5 KM, camiseta oficial, medalha de participação, hidratação e frutas. Fé que nos move, passos que nos unem!">
+  <meta name="keywords" content="Corrida Nossa Senhora Aparecida, Corrida de Rua São Gonçalo, Corrida 5km Galo Branco, Corrida da Padroeira">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23e5b83b'><path d='M12 2L15 8L21 9L17 14L18 20L12 17L6 20L7 14L3 9L9 8L12 2Z'/></svg>">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER / NAVBAR ==================== -->
+  <header class="header" id="header">
+    <div class="container navbar">
+      <a href="#inicio" class="nav-brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-church"></i>
+        </div>
+        <div class="brand-text">
+          <span class="brand-sub">Paróquia de</span>
+          <span class="brand-title">Nossa Senhora Aparecida</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#inicio" class="nav-link active">Início</a></li>
+          <li><a href="#informacoes" class="nav-link">Corrida</a></li>
+          <li><a href="#kit" class="nav-link">Inscrição & Kit</a></li>
+          <li><a href="#inscritos" class="nav-link">Inscritos</a></li>
+          <li><a href="#percurso" class="nav-link">Percurso</a></li>
+          <li><a href="#regulamento" class="nav-link">Regulamento</a></li>
+          <li><a href="#faq" class="nav-link">Dúvidas</a></li>
+        </ul>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <button class="btn-header-cta" onclick="openRegistrationModal()">
+          <i class="fa-solid fa-person-running"></i>
+          <span>Inscreva-se</span>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="hero" id="inicio">
+    <div class="hero-glow-1"></div>
+    <div class="hero-glow-2"></div>
+
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-edition">
+          <span class="hero-number">1ª</span>
+          <div class="hero-title-group">
+            <h1 class="hero-title-top">Corrida da</h1>
+            <h2 class="hero-title-church">Paróquia de<br>Nossa Senhora Aparecida</h2>
+          </div>
+        </div>
+
+        <p class="hero-slogan">
+          <strong>Fé que nos move.</strong> Passos que <strong>nos unem.</strong>
+        </p>
+
+        <div class="hero-cta-box" onclick="openRegistrationModal()">
+          <span class="runner-icon"><i class="fa-solid fa-person-running"></i></span>
+          <span class="cta-action">Inscreva-se</span>
+          <span class="cta-divider"></span>
+          <span class="cta-price">R$ 75,00</span>
+        </div>
+
+        <!-- Contagem Regressiva -->
+        <div class="countdown-container">
+          <div class="countdown-title">
+            <i class="fa-regular fa-clock"></i>
+            <span>Contagem Regressiva para a Largada</span>
+          </div>
+          <div class="countdown-grid">
+            <div class="countdown-card">
+              <div class="countdown-val" id="cd-days">00</div>
+              <div class="countdown-lbl">Dias</div>
+            </div>
+            <div class="countdown-card">
+              <div class="countdown-val" id="cd-hours">00</div>
+              <div class="countdown-lbl">Horas</div>
+            </div>
+            <div class="countdown-card">
+              <div class="countdown-val" id="cd-minutes">00</div>
+              <div class="countdown-lbl">Min</div>
+            </div>
+            <div class="countdown-card">
+              <div class="countdown-val" id="cd-seconds">00</div>
+              <div class="countdown-lbl">Seg</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <!-- Divisória em Onda Estilizada -->
+    <div class="hero-wave-divider">
+      <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,32L80,48C160,64,320,96,480,96C640,96,800,64,960,53.3C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" fill="#ffffff"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ==================== INFORMAÇÕES DA CORRIDA & CARD DESTAQUE ==================== -->
+  <section class="section-info-highlight" id="informacoes">
+    <div class="container info-highlight-grid">
+      
+      <!-- Informações à Esquerda -->
+      <div class="info-left-pane">
+        <span class="section-tag">Tudo o que você precisa saber</span>
+        <h2 class="section-main-title">Informações da Corrida</h2>
+
+        <div class="info-list">
+          <!-- Data -->
+          <div class="info-item">
+            <div class="info-icon-wrapper">
+              <i class="fa-regular fa-calendar-days"></i>
+            </div>
+            <div class="info-content-box">
+              <span class="info-label">Data</span>
+              <span class="info-val">12 de outubro</span>
+              <span class="info-subtext">Feriado Nacional • Dia de Nossa Senhora Aparecida</span>
+            </div>
+          </div>
+
+          <!-- Largada -->
+          <div class="info-item">
+            <div class="info-icon-wrapper">
+              <i class="fa-regular fa-clock"></i>
+            </div>
+            <div class="info-content-box">
+              <span class="info-label">Largada</span>
+              <span class="info-val">8h00</span>
+              <span class="info-subtext">Concentração e aquecimento a partir das 07h00</span>
+            </div>
+          </div>
+
+          <!-- Local -->
+          <div class="info-item">
+            <div class="info-icon-wrapper">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="info-content-box">
+              <span class="info-label">Local</span>
+              <span class="info-val">Paróquia de Nossa Senhora Aparecida</span>
+              <span class="info-subtext">Galo Branco - São Gonçalo / RJ • <a href="https://maps.google.com/?q=Paróquia+Nossa+Senhora+Aparecida+Galo+Branco+Sao+Goncalo" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir no Mapa</a></span>
+            </div>
+          </div>
+
+          <!-- Percurso -->
+          <div class="info-item">
+            <div class="info-icon-wrapper">
+              <i class="fa-solid fa-route"></i>
+            </div>
+            <div class="info-content-box">
+              <span class="info-label">Percurso</span>
+              <span class="info-val">5 KM</span>
+              <span class="info-subtext">Circuito sinalizado com postos de hidratação e suporte médico</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card Inscrição Única à Direita -->
+      <div class="card-registration-highlight">
+        <div class="card-reg-header">
+          <i class="fa-solid fa-person-running card-reg-header-icon"></i>
+          <span class="card-reg-header-text">Inscrição Única</span>
+        </div>
+
+        <div class="card-reg-price">
+          <span>R$</span>75,00
+        </div>
+
+        <div class="card-reg-divider">
+          <i class="fa-solid fa-cross"></i>
+        </div>
+
+        <div class="card-reg-modality">
+          Corrida 5 KM
+        </div>
+
+        <button class="btn-guarantee-spot" onclick="openRegistrationModal()">
+          <span>Garantir Minha Vaga</span>
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <div class="card-reg-security">
+          <i class="fa-solid fa-lock"></i>
+          <span>Pagamento direto via PIX para a Paróquia</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== SUA INSCRIÇÃO INCLUI ==================== -->
+  <section class="section-included" id="kit">
+    <div class="container">
+      
+      <div class="section-center-header">
+        <span class="section-tag">Kit do Atleta Completo</span>
+        <h2 class="section-main-title">Sua Inscrição Inclui</h2>
+      </div>
+
+      <!-- 5 Itens Oficiais -->
+      <div class="kit-grid">
+        <div class="kit-item-card">
+          <div class="kit-icon-box">
+            <i class="fa-solid fa-shirt"></i>
+          </div>
+          <h3 class="kit-item-title">Camiseta</h3>
+          <p class="kit-item-desc">do Evento</p>
+        </div>
+
+        <div class="kit-item-card">
+          <div class="kit-icon-box">
+            <i class="fa-solid fa-id-card-clip"></i>
+          </div>
+          <h3 class="kit-item-title">Número</h3>
+          <p class="kit-item-desc">de Peito</p>
+        </div>
+
+        <div class="kit-item-card">
+          <div class="kit-icon-box">
+            <i class="fa-solid fa-medal"></i>
+          </div>
+          <h3 class="kit-item-title">Medalha</h3>
+          <p class="kit-item-desc">de Participação</p>
+        </div>
+
+        <div class="kit-item-card">
+          <div class="kit-icon-box">
+            <i class="fa-solid fa-bottle-water"></i>
+          </div>
+          <h3 class="kit-item-title">Hidratação</h3>
+          <p class="kit-item-desc">durante o percurso</p>
+        </div>
+
+        <div class="kit-item-card">
+          <div class="kit-icon-box">
+            <i class="fa-solid fa-apple-whole"></i>
+          </div>
+          <h3 class="kit-item-title">Frutas</h3>
+          <p class="kit-item-desc">na chegada</p>
+        </div>
+      </div>
+
+      <!-- Banner Devocional -->
+      <div class="devotional-banner">
+        <div class="devotional-left">
+          <div class="devotional-icon-wrap">
+            <i class="fa-solid fa-hands-praying"></i>
+          </div>
+          <p class="devotional-quote">
+            "Sob a proteção de <span>Nossa Senhora Aparecida</span>, caminhamos com fé e superamos juntos!"
+          </p>
+        </div>
+        <button class="btn-view-kit-modal" onclick="openRegistrationModal()">
+          Escolher Tamanho <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <!-- Showcase Visual do Kit -->
+      <div class="kit-visual-showcase">
+        <div class="kit-showcase-img">
+          <img src="assets/kit.jpg" alt="Kit Oficial da 1ª Corrida da Paróquia de Nossa Senhora Aparecida">
+        </div>
+        <div class="kit-showcase-content">
+          <h3>Camiseta Dry-Fit Oficial & Medalha de Honra</h3>
+          <p>
+            Tecido tecnológico de alta performance, leve, respirável e com proteção UV. Acompanha medalha metálica gravada em relevo dourado de Nossa Senhora Aparecida para todos os participantes que cruzarem a linha de chegada.
+          </p>
+          <div style="margin-bottom: 0.5rem; font-weight: 700; font-size: 0.85rem; color: var(--color-primary-navy);">
+            Tamanhos Disponíveis para Escolha na Inscrição:
+          </div>
+          <div class="size-table-preview">
+            <div class="size-pill">P</div>
+            <div class="size-pill">M</div>
+            <div class="size-pill">G</div>
+            <div class="size-pill">GG</div>
+            <div class="size-pill">XGG</div>
+            <div class="size-pill">Baby Look</div>
+          </div>
+          <button class="btn-guarantee-spot" style="padding: 12px 20px; font-size: 1rem;" onclick="openRegistrationModal()">
+            <i class="fa-solid fa-cart-shopping"></i> Garantir Inscrição com Kit
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== LISTA DE INSCRITOS (CONFIRMADOS) ==================== -->
+  <section class="section-athletes-list" id="inscritos">
+    <div class="container">
+      <div class="section-center-header">
+        <span class="section-tag">Pelotão Oficial</span>
+        <h2 class="section-main-title">Lista de Atletas Inscritos</h2>
+        <p style="color: #64748b; font-size: 0.95rem; margin-top: 0.5rem;" id="publicAthletesCount">
+          Carregando inscritos...
+        </p>
+      </div>
+
+      <!-- Barra de Busca -->
+      <div class="athletes-search-box">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" class="search-input" placeholder="Buscar por Nome ou Número de Inscrição..." oninput="handlePublicSearch(event)">
+      </div>
+
+      <!-- Tabela de Inscritos -->
+      <div class="athletes-table-card">
+        <div style="overflow-x: auto;">
+          <table class="athletes-table">
+            <thead>
+              <tr>
+                <th>Nº Inscrição</th>
+                <th>Nome do Atleta</th>
+                <th>Modalidade</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="publicAthletesTableBody">
+              <!-- Preenchido dinamicamente via app.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PERCURSO 5 KM ==================== -->
+  <section class="section-route" id="percurso">
+    <div class="container">
+      <div class="section-center-header">
+        <span class="section-tag">Trajeto Oficial</span>
+        <h2 class="section-main-title">Percurso de 5 KM</h2>
+      </div>
+
+      <div class="route-grid">
+        <div class="route-info-box">
+          <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--color-gold); margin-bottom: 0.5rem;">
+            Pontos de Destaque da Corrida
+          </h3>
+          <p style="font-size: 0.95rem; color: #cbd5e1;">
+            Percurso seguro, plano e asfaltado no coração do Galo Branco em São Gonçalo, com apoio da Guarda Municipal, ambulância e pontos de apoio pastoral.
+          </p>
+
+          <div class="route-steps-timeline">
+            <div class="route-step">
+              <div class="route-step-icon">1</div>
+              <div class="route-step-text">
+                <h4>Largada na Paróquia (0 KM)</h4>
+                <p>Concentração em frente à Igreja Matriz de Nossa Senhora Aparecida com bênção dos atletas às 07h45.</p>
+              </div>
+            </div>
+
+            <div class="route-step">
+              <div class="route-step-icon">2</div>
+              <div class="route-step-text">
+                <h4>Posto de Hidratação 1 (KM 2.5)</h4>
+                <p>Distribuição de copos de água mineral lacrados e apoio de primeiros socorros.</p>
+              </div>
+            </div>
+
+            <div class="route-step">
+              <div class="route-step-icon">3</div>
+              <div class="route-step-text">
+                <h4>Ponto de Retorno (KM 2.5 ao KM 5)</h4>
+                <p>Trecho com monitoramento e apoio dos voluntários da comunidade paroquial.</p>
+              </div>
+            </div>
+
+            <div class="route-step">
+              <div class="route-step-icon">🏁</div>
+              <div class="route-step-text">
+                <h4>Linha de Chegada & Tenda Pós-Prova (5 KM)</h4>
+                <p>Entrega das medalhas oficiais, kit frutas, hidratação final e premiação dos campeões.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="route-map-visual">
+          <div class="route-map-badge">
+            <i class="fa-solid fa-map-location-dot"></i> 5.000 Metros
+          </div>
+          <h4 style="font-family: var(--font-heading); font-size: 1.25rem; color: var(--color-primary-navy); margin-bottom: 0.5rem;">
+            Galo Branco - São Gonçalo / RJ
+          </h4>
+          <p style="color: #64748b; font-size: 0.9rem; max-width: 320px; margin-bottom: 1.5rem;">
+            Ruas pavimentadas com trânsito desviado pela autoridade de trânsito local para máxima segurança de todos os atletas.
+          </p>
+          <a href="https://maps.google.com/?q=Paróquia+Nossa+Senhora+Aparecida+Galo+Branco+Sao+Goncalo" target="_blank" rel="noopener" class="btn-banner-action" style="font-size: 0.9rem; padding: 10px 20px;">
+            <i class="fa-solid fa-location-arrow"></i> Ver Local no Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PREMIAÇÃO & REGULAMENTO ==================== -->
+  <section class="section-rules" id="regulamento">
+    <div class="container">
+      <div class="section-center-header">
+        <span class="section-tag">Categorias & Troféus</span>
+        <h2 class="section-main-title">Premiação da Prova</h2>
+      </div>
+
+      <div class="prizes-grid">
+        <div class="prize-card">
+          <div class="prize-badge-icon" style="color: #e5b83b;">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+          <h3 class="prize-title">Geral Masculino & Feminino</h3>
+          <p class="prize-desc">Troféus especiais para os 5 primeiros colocados gerais no percurso de 5 KM.</p>
+        </div>
+
+        <div class="prize-card">
+          <div class="prize-badge-icon" style="color: #3b82f6;">
+            <i class="fa-solid fa-medal"></i>
+          </div>
+          <h3 class="prize-title">Faixas Etárias</h3>
+          <p class="prize-desc">Reconhecimento especial por categorias de idade (sub-20, 20-29, 30-39, 40-49, 50-59, 60+).</p>
+        </div>
+
+        <div class="prize-card">
+          <div class="prize-badge-icon" style="color: #10b981;">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <h3 class="prize-title">Medalha Finisher</h3>
+          <p class="prize-desc">Medalha exclusiva em metal de Nossa Senhora Aparecida para 100% dos concluintes.</p>
+        </div>
+      </div>
+
+      <!-- FAQ & Regras -->
+      <div class="section-center-header" style="margin-bottom: 2rem;" id="faq">
+        <span class="section-tag">Tire suas Dúvidas</span>
+        <h2 class="section-main-title">Perguntas Frequentes & Regulamento</h2>
+      </div>
+
+      <div class="faq-accordion">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Quando e onde será a retirada do kit?</span>
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>A entrega dos kits ocorrerá na secretaria da Paróquia de Nossa Senhora Aparecida nos dias 10 e 11 de Outubro, das 09h às 18h, e no dia da prova das 06h30 às 07h30 (apenas para inscritos de outras cidades). Apresente documento com foto e o comprovante de inscrição.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Como funciona a validação do meu pagamento?</span>
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Ao concluir a inscrição pelo site, efetue o PIX no valor de R$ 75,00 e clique no botão para enviar o comprovante no WhatsApp da Paróquia. A equipe paroquial validará seu pagamento e seu nome aparecerá na aba "Inscritos" como confirmado.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Posso fazer caminhada ao invés de correr?</span>
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Com certeza! O evento celebra a união e a devoção. Você pode completar o percurso no seu próprio ritmo, seja correndo ou caminhando com a sua família.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Haverá guarda-volumes e apoio médico no local?</span>
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Sim, contaremos com guarda-volumes gratuito para itens pessoais, banheiros, postos de água, frutas e equipe de socorristas com ambulância de prontidão durante todo o evento.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== BANNER DE CHAMADA ==================== -->
+  <section class="section-cta-banner">
+    <div class="container cta-banner-wrapper">
+      <div class="cta-banner-left">
+        <div class="trophy-badge">
+          <i class="fa-solid fa-trophy"></i>
+        </div>
+        <div class="cta-banner-text">
+          <h3>Venha fazer parte</h3>
+          <span>Deste momento histórico!</span>
+        </div>
+      </div>
+
+      <div class="cta-banner-right">
+        <p>Inscreva-se e garanta sua vaga!</p>
+        <button class="btn-banner-action" onclick="openRegistrationModal()">
+          <i class="fa-solid fa-person-running"></i> Inscreva-se Já
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-social-links">
+          <a href="https://instagram.com/paroquiansaparecida.sg" target="_blank" rel="noopener" class="social-link-item">
+            <i class="fa-brands fa-instagram" style="font-size: 1.2rem; color: var(--color-gold);"></i>
+            <span>/ paroquiansaparecida.sg</span>
+          </a>
+          <a href="https://facebook.com/paroquiansaparecida.sg" target="_blank" rel="noopener" class="social-link-item">
+            <i class="fa-brands fa-facebook" style="font-size: 1.2rem; color: var(--color-gold);"></i>
+            <span>/ paroquiansaparecida.sg</span>
+          </a>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 8px; color: var(--color-gold); font-weight: 700; font-size: 0.9rem;">
+          <i class="fa-solid fa-bullhorn"></i>
+          <span>Mais informações em breve nas redes sociais!</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Paróquia de Nossa Senhora Aparecida - Galo Branco, São Gonçalo/RJ. Todos os direitos reservados.</p>
+        <a href="admin.html" class="admin-login-link">
+          <i class="fa-solid fa-lock"></i> Painel do Organizador
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== MODAL DE INSCRIÇÃO INTERATIVO ==================== -->
+  <div class="modal-overlay" id="registrationModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-header-title" id="modalTitle">
+          Inscrição • <span>1ª Corrida NSA</span>
+        </div>
+        <button class="btn-close-modal" onclick="closeRegistrationModal()" aria-label="Fechar Modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Indicador de Etapas -->
+      <div class="steps-indicator">
+        <div class="step-tab active" id="tab-step-1">
+          <span class="step-num">1</span>
+          <span>Dados do Atleta</span>
+        </div>
+        <div class="step-tab" id="tab-step-2">
+          <span class="step-num">2</span>
+          <span>Escolha do Kit</span>
+        </div>
+        <div class="step-tab" id="tab-step-3">
+          <span class="step-num">3</span>
+          <span>PIX & Envio</span>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        
+        <!-- PASSO 1: DADOS DO ATLETA -->
+        <form id="form-step-1" class="form-step active" onsubmit="handleStep1Submit(event)">
+          <div class="form-group">
+            <label class="form-label" for="athlete-name">Nome Completo *</label>
+            <input type="text" id="athlete-name" class="form-input" placeholder="Ex: Maria da Silva" required>
+          </div>
+
+          <div class="form-group-row">
+            <div class="form-group">
+              <label class="form-label" for="athlete-cpf">CPF *</label>
+              <input type="text" id="athlete-cpf" class="form-input" placeholder="000.000.000-00" required maxlength="14">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="athlete-birth">Data de Nascimento *</label>
+              <input type="date" id="athlete-birth" class="form-input" required>
+            </div>
+          </div>
+
+          <div class="form-group-row">
+            <div class="form-group">
+              <label class="form-label" for="athlete-phone">WhatsApp / Celular *</label>
+              <input type="tel" id="athlete-phone" class="form-input" placeholder="(21) 99999-9999" required maxlength="15">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="athlete-gender">Sexo *</label>
+              <select id="athlete-gender" class="form-select" required>
+                <option value="">Selecione...</option>
+                <option value="Feminino">Feminino</option>
+                <option value="Masculino">Masculino</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="athlete-email">E-mail para Confirmação *</label>
+            <input type="email" id="athlete-email" class="form-input" placeholder="seuemail@exemplo.com" required>
+          </div>
+
+          <div class="form-nav-buttons">
+            <button type="submit" class="btn-form-next">
+              Avançar para o Kit <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </form>
+
+        <!-- PASSO 2: ESCOLHA DO KIT -->
+        <form id="form-step-2" class="form-step" onsubmit="handleStep2Submit(event)">
+          <div class="form-group">
+            <label class="form-label">Modalidade Selecionada</label>
+            <input type="text" class="form-input" value="Corrida & Caminhada 5 KM — R$ 75,00" readonly style="background: #f1f5f9; font-weight: 700; color: var(--color-primary-navy);">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Selecione o Tamanho da sua Camiseta Dry-Fit Oficial *</label>
+            <div class="shirt-picker-grid">
+              <label class="shirt-option">
+                <input type="radio" name="shirt-size" value="P" required checked>
+                <span class="shirt-label">P</span>
+              </label>
+              <label class="shirt-option">
+                <input type="radio" name="shirt-size" value="M">
+                <span class="shirt-label">M</span>
+              </label>
+              <label class="shirt-option">
+                <input type="radio" name="shirt-size" value="G">
+                <span class="shirt-label">G</span>
+              </label>
+              <label class="shirt-option">
+                <input type="radio" name="shirt-size" value="GG">
+                <span class="shirt-label">GG</span>
+              </label>
+              <label class="shirt-option">
+                <input type="radio" name="shirt-size" value="XGG">
+                <span class="shirt-label">XGG</span>
+              </label>
+              <label class="shirt-option">
+                <input type="radio" name="shirt-size" value="Baby Look M">
+                <span class="shirt-label">Baby M</span>
+              </label>
+              <label class="shirt-option">
+                <input type="radio" name="shirt-size" value="Baby Look G">
+                <span class="shirt-label">Baby G</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-top: 1.5rem;">
+            <label style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.85rem; color: #475569; cursor: pointer;">
+              <input type="checkbox" id="terms-agree" required style="margin-top: 3px;">
+              <span>Declaro que estou em plenas condições de saúde para participar do evento e concordo com os termos do regulamento oficial da prova.</span>
+            </label>
+          </div>
+
+          <div class="form-nav-buttons">
+            <button type="button" class="btn-form-prev" onclick="goToStep(1)">
+              <i class="fa-solid fa-arrow-left"></i> Voltar
+            </button>
+            <button type="submit" class="btn-form-next">
+              Gerar PIX de R$ 75,00 <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </form>
+
+        <!-- PASSO 3: PAGAMENTO PIX & WHATSAPP -->
+        <div id="form-step-3" class="form-step">
+          <div class="pix-qr-container">
+            <span style="background: rgba(229, 184, 59, 0.15); color: var(--color-primary-navy); padding: 4px 12px; border-radius: 50px; font-size: 0.8rem; font-weight: 800; text-transform: uppercase;">
+              Valor Fixo Travado
+            </span>
+            <div style="font-size: 2.2rem; font-weight: 900; color: var(--color-primary-navy); margin: 0.5rem 0;">
+              R$ 75,00
+            </div>
+            <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 1rem;">
+              Abra o aplicativo do seu banco, escolha <strong>Pagar com PIX</strong> e aponte a câmera para o QR Code abaixo:
+            </p>
+            
+            <div class="pix-qr-box">
+              <svg viewBox="0 0 100 100" fill="#08172e">
+                <path d="M0 0h30v30H0zm5 5h20v20H5zm5 5h10v10H10zM70 0h30v30H70zm5 5h20v20H75zm5 5h10v10H80zM0 70h30v30H0zm5 5h20v20H5zm5 5h10v10H10zM35 10h5v15h-5zM45 5h15v5h-15zM50 15h10v10h-10zM35 35h10v10h-10zM50 35h15v5h-15zM75 35h10v10h-10zM35 50h5v20h-5zM45 50h10v10h-10zM60 45h10v15h-10zM75 55h20v5h-20zM45 75h10v20h-10zM60 70h15v5h-15zM80 70h15v15h-15zM60 85h10v10h-10zM80 90h15v5h-15z"/>
+              </svg>
+            </div>
+
+            <div class="pix-copy-box">
+              <input type="text" id="pix-code-field" class="pix-code-input" value="00020126580014br.gov.bcb.pix0136paroquiansaparecida@sg.org.br520400005303986540575.005802BR5925PAROQUIA NSA SG6009SAO GONCALO62070503***6304ABCD" readonly>
+              <button class="btn-copy-pix" onclick="copyPixCode()">
+                <i class="fa-regular fa-copy"></i> Copiar Chave
+              </button>
+            </div>
+          </div>
+
+          <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.2rem; margin-bottom: 1.5rem; text-align: center;">
+            <strong style="color: var(--color-primary-navy); font-size: 0.95rem; display: block; margin-bottom: 4px;">
+              Último Passo Obrigatório:
+            </strong>
+            <p style="font-size: 0.85rem; color: #475569;">
+              Após pagar no banco, clique no botão abaixo para <strong>enviar o comprovante para a Paróquia</strong>. Assim que a secretaria validar, seu nome aparecerá na <strong>Lista Oficial de Inscritos</strong>!
+            </p>
+
+            <a id="btnSendWhatsappProof" href="#" target="_blank" rel="noopener" class="btn-whatsapp-proof">
+              <i class="fa-brands fa-whatsapp" style="font-size: 1.5rem;"></i>
+              <span>Enviar Comprovante no WhatsApp</span>
+            </a>
+          </div>
+
+          <div class="form-nav-buttons">
+            <button type="button" class="btn-form-prev" onclick="closeRegistrationModal()">
+              Concluir & Fechar
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-msg" id="toastMsg">
+    Chave PIX copiada com sucesso!
+  </div>
+
+  <!-- Custom JavaScript -->
+  <script src="js/app.js"></script>
+</body>
+</html>
